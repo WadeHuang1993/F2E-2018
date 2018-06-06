@@ -2,6 +2,9 @@ body {
     background-color: #ddf;
 }
 
+/**
+ * site-header
+ */
 nav.site-header {
     background-color: #4A90E2 !important;
     font-family: Roboto;
@@ -21,24 +24,61 @@ nav.site-header .tab a:hover {
     text-decoration: none;
 }
 
+/**
+ * add-task
+ */
 .content .add-task input {
     height: 40px;
     line-height: 50px;
 }
 
+
+/**
+ * task
+ */
 .content .task-list .task {
     background-color: #F2F2F2;
 }
 
-.content .task-list .task input {
+.content .task-list .task-header input {
     background-color: #F2F2F2;
     border-width: 0px;
     border: none;
 }
-.content .task-list .task .task-footer  i {
+
+.content .task-list .task i:hover {
+    color: #c69500;
+}
+
+.content .task-list .task .task-footer i {
     color: #c6c8ca;
 }
 
-.content .task-list .task  .task-footer i:hover {
+.content .task-list .task .task-footer i:hover {
     color: #c69500;
 }
+
+/**
+ * task-marked
+ */
+.content .task-list .task-marked {
+    background-color: #FFF6EC !important;
+}
+
+.content .task-list .task-marked input {
+    background-color: #FFF6EC;
+    border-width: 0px;
+    border: none;
+}
+/**
+ * task-editing
+ */
+.content .task-list .task-editing {
+    background-color: #F2F2F2;
+}
+
+.content .task-list .task-editing .task-header {
+    border-bottom-color: #c6c8ca;
+    border-bottom-style: solid;
+}
+
