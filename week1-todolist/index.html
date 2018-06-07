@@ -11,10 +11,48 @@
             integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
             crossorigin="anonymous"></script>
     <script src="assets/bootstrap4/js/bootstrap.js"></script>
+    <script src="assets/js/jquery.tmpl.js"></script>
+    <script src="assets/js/taskStorage.js"></script>
     <link rel="stylesheet" href="assets/bootstrap4/css/bootstrap.css"/>
     <link rel="stylesheet" href="assets/css/style.css"/>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
           integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <script type="text/x-jquery-tmpl" src="assets/tmpl/task.js" id="myTempl">
+        <div class="task p-2 mt-2 rounded" draggable="true">
+            <div class="task-header pr-2">
+                <div class="d-inline-block">
+                    <input type="checkbox" class="ml-2"/>
+                    <span>${title}</span>
+                </div>
+                <div class="d-inline-block float-right">
+                    <i class="far fa-lg fa-bookmark ml-2"></i> <i class="fas fa-lg fa-pencil-alt ml-2"></i>
+                </div>
+            </div>
+            <div class="task-footer">
+                <i class="far fa-calendar-alt ml-2"> ${deadline}</i> <i class="far fa-file ml-2"></i> <i
+                    class="far fa-comment-dots ml-2"></i>
+            </div>
+        </div>
+
+
+
+
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var btnAddTask = document.getElementById('btn-add-task');
+
+            btnAddTask.addEventListener('click', addTask);
+        });
+
+        function addTask() {
+            var taskTitle = document.getElementById('creatorInput').value;
+
+            taskStorage.create(taskTitle);
+
+            console.log(JSON.parse(sessionStorage.tasks));
+        }
+    </script>
 </head>
 <body>
 
@@ -28,18 +66,21 @@
 
 <section class="content container-fluid col-lg-6 col-md-6 offset-lg-3 col-sm-12 p-2">
 
-    <div class="add-task">
+    <div id="task-creator" class="add-task">
         <div class="input-group mb-2">
             <div class="input-group-prepend">
-                <div class="input-group-text"><i class="fa fa-plus"></i></div>
+                <div id="btn-add-task" class="input-group-text"><i class="fa fa-plus"></i></div>
             </div>
-            <input type="text" class="form-control" id="" placeholder="Add Task">
+            <input type="text" class="form-control" id="creatorInput" placeholder="Add Task">
         </div>
     </div>
+    <script>
 
-    <div class="task-list">
+    </script>
+
+    <div id="task-list" class="task-list">
         <!-- task -->
-        <div class="task p-2 mt-2 rounded">
+        <div class="task p-2 mt-2 rounded" draggable="true">
             <div class="task-header pr-2">
                 <div class="d-inline-block">
                     <input type="checkbox" class="ml-2"/><input class="ml-1" placeholder="Type Something Here...">
@@ -55,7 +96,7 @@
         </div>
 
         <!-- task-marked -->
-        <div class="task task-marked p-2 mt-2 rounded">
+        <div class="task task-marked p-2 mt-2 rounded" draggable="true">
             <div class="task-header pr-2">
                 <div class="d-inline-block">
                     <input type="checkbox" class="ml-2"/><input class="ml-1" placeholder="Type Something Here...">

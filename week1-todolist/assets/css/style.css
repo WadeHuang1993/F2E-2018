@@ -2,6 +2,13 @@ body {
     background-color: #ddf;
 }
 
+/* 突顯外框，Debug 用 */
+/** {*/
+    /*outline-style: solid;*/
+    /*outline-width: 1px;*/
+    /*outline-color: #f00;*/
+/*}*/
+
 /**
  * site-header
  */
