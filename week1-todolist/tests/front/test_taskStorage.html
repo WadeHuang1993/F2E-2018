@@ -10,8 +10,9 @@
   <div id="messages"></div>
   <div id="fixtures"></div>
   <script src="../../node_modules/mocha/mocha.js"></script>
+  <script src="blanket.min.js" data-cover-flags="branchTracking"  data-cover-adapter="mocha-blanket.js"></script>
   <script src="../../node_modules/chai/chai.js"></script>
-  <script src="../../assets/js/taskStorage.js"></script>
+  <script src="../../assets/js/taskStorage.js" data-cover></script>
   <script>mocha.setup('bdd')</script>
   <script src="test_taskStorage.js"></script>
   <script>mocha.run();</script>
