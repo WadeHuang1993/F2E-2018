@@ -30,6 +30,17 @@
         var store = store;
 
         /**
+         * 取得最新一筆待辦事項
+         *
+         * @access private
+         * @returns {number} id
+         */
+        function getNewestTask() {
+
+            return store[store.id];
+        }
+
+        /**
          * 取得 store 最新 id
          *
          * @access private
@@ -99,7 +110,8 @@
         }
 
         return {
-            create: create
+            create: create,
+            getNewestTask: getNewestTask
         }
     };
 
