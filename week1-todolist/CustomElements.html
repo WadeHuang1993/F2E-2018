@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Custom Elements</title>
+    <link rel="stylesheet" href="assets/css/style.css"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css">
+    <script src="assets/js/Component.js"></script>
+
+    <script language="JavaScript">
+        window.onload = (function () {
+
+            var Task = Component({
+                tag: 'task-item',
+                template: '#task-item',
+                data: {
+                    title: '古典音樂‎'
+                }
+            });
+
+            document.body.appendChild(Task);
+            document.body.appendChild(Component({
+                tag: 'task-item',
+                template: '#task-item',
+                data: {
+                    title: '社會學音樂'
+                }
+            }));
+            document.body.appendChild(Component({
+                tag: 'task-item',
+                template: '#task-item',
+                data: {
+                    title: '極速民謠'
+                }
+            }));
+
+            var taskProto = Object.create(HTMLElement.prototype);
+
+            /**
+             * taskElement 建立時觸發
+             *
+             * 用於初始化 taskElement 的元件或值
+             */
+            taskProto.createdCallback = function () {
+                var self = this;
+
+                var template = document.querySelector('#task-item');
+                var cloneTemplate = document.importNode(template.content, true);
+                this.shadowRoot = this.createShadowRoot({mode: 'open'});
+                this.shadowRoot.appendChild(cloneTemplate);
+
+                self.done = this.shadowRoot.querySelector('.done');
+                self.taskTitle = this.shadowRoot.querySelector('.task-title');
+                self.stared = this.shadowRoot.querySelector('.stared');
+                self.edit = this.shadowRoot.querySelector('.edit');
+            };
+
+            /**
+             * taskElement 被渲染在 DOM 時觸發
+             *
+             * 用於配置 template 裡面各種元件的事件
+             */
+            taskProto.attachedCallback = function () {
+                var self = this;
+
+                this.done.addEventListener('click', function () {
+                    self.onDone.call(self, arguments);
+                });
+                this.stared.addEventListener('click', function () {
+                    self.onStared.call(self, arguments);
+                });
+                this.edit.addEventListener('click', function () {
+                    self.onEdit.call(self, arguments);
+                });
+            };
+
+            /**
+             * 點擊 Done Checkbox 事件
+             */
+            taskProto.onDone = function () {
+                this.remove();
+                console.log(arguments);
+            };
+
+            /**
+             * 點擊
+             */
+            taskProto.onStared = function () {
+                alert('stared');
+            };
+
+            /**
+             *  點擊編輯按鈕事件
+             */
+            taskProto.onEdit = function () {
+                alert('edit');
+            };
+
+//            var TaskElement = document.registerElement('task-item', {prototype: taskProto});
+
+//            document.body.appendChild(new TaskElement);
+//            document.body.appendChild(new TaskElement);
+        });
+    </script>
+</head>
+<body>
+
+<template id="task-item">
+    <style>
+        @import url("https://use.fontawesome.com/releases/v5.0.13/css/all.css");
+        @import url("assets/bootstrap4/css/bootstrap.css");
+    </style>
+    <style>
+        .task {
+            background-color: #F2F2F2;
+        }
+
+        .task-header input {
+            background-color: #F2F2F2;
+            border-width: 0px;
+            border: none;
+        }
+
+        .task i:hover {
+            color: #c69500;
+        }
+
+        .task .task-footer i {
+            color: #c6c8ca;
+        }
+
+        .task .task-footer i:hover {
+            color: #c69500;
+        }
+
+        task-item .task-footer i {
+            display: block;
+            text-align: center;
+            text-decoration: none;
+            color: #08C;
+            border-top: 1px solid #EEE;
+            font-weight: bold;
+            padding: 0.75em 0;
+        }
+    </style>
+    <div class="task p-2 mt-2 rounded" draggable="true">
+        <div class="task-header pr-2">
+            <div class="d-inline-block">
+                <input type="checkbox" class="done ml-2"/>
+                <span class="task-title">Hello !</span>
+            </div>
+            <div class="d-inline-block float-right">
+                <i class="stared far fa-lg fa-bookmark ml-2"></i> <i class="edit fas fa-lg fa-pencil-alt ml-2"></i>
+            </div>
+        </div>
+        <div class="task-footer">
+            <i class="far fa-calendar-alt ml-2"></i> <i class="far fa-file ml-2"></i> <i
+                class="far fa-comment-dots ml-2"></i>
+        </div>
+    </div>
+</template>
+
+<h1>Custom Elements</h1>
+</body>
+</html>
