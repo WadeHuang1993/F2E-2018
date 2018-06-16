@@ -5,9 +5,149 @@
     <meta name="viewport" content="width=device-width, initial-scale=1 shrink-to-fit=no">
     <title>F2E 2018 Week2 - Filter</title>
     <script src="assets/bootstrap4/js/bootstrap.js"></script>
-    <link rel="stylesheet" href="assets/bootstrap4/css/bootstrap.css"/>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="assets/css/bootstrap.css"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
+          integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 </head>
 <body>
+<header class="bg-primary p-2 pl-5 container-fluid align-items-center">
+    <div class="site-title text-white d-inline-block col-3"><h2>HaveFun</h2></div>
+    <div class="searcher d-inline-block col-6">
+        <div class="input-group mb-2">
+            <div class="input-group-prepend">
+                <div id="btn-search" class="input-group-text"><i class="fa fa-search"></i></div>
+            </div>
+            <input type="text" class="form-control" id="searcher" placeholder="Explore your own activities">
+        </div>
+    </div>
+</header>
 
+<section class="body container-fluid row pl-5 pr-5">
+    <aside class="bg-light border p-2 col-3">
+        <div class="filter pr-3 pl-3">
+            <div class="location-selector w-100 border-bottom">
+                <div class="form-group row">
+                    <label for="location" class="ml-2">location</label>
+                    <select class="form-control ml-4 mr-3" id="location">
+                        <option>Taiwan</option>
+                    </select>
+                </div>
+            </div>
+            <div class="date-range mt-3">
+                <div class="form-group row">
+                    <label for="date-start" class="col-2 col-form-label">From</label>
+                    <div class="col-sm-10">
+                        <input type="date" id="date-start" class="form-control">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="date-end" class="col-2 col-form-label">to</label>
+                    <div class="col-sm-10">
+                        <input type="date" class="form-control" id="date-end">
+                    </div>
+                </div>
+            </div>
+            <div class="categories">
+                <ul>
+                    <li><label><input type="checkbox" name="categores" value="">All</label></li>
+                    <li><label><input type="checkbox" name="categores" value="">Entertainment</label></li>
+                    <li><label><input type="checkbox" name="categores" value="">Food</label></li>
+                    <li><label><input type="checkbox" name="categores" value="">Learning</label></li>
+                    <li><label><input type="checkbox" name="categores" value="">Outdoors</label></li>
+                </ul>
+            </div>
+        </div>
+    </aside>
+
+    <section class="d-inline-block float-right container col-8">
+        <span class="search-result">Showing <span class="text-warning">15</span> results by...</span>
+
+        <div class="tags">
+            <button class="btn btn-primary">Koahsiung <i class="fa fa-lg fa-plus"></i></button>
+            <button class="btn btn-primary">Entertainment <i class="fa fa-lg fa-plus"></i></button>
+        </div>
+
+        <article>
+            <div class="article">
+                <div class="article-img">
+                    <img src="" alt="">
+                </div>
+
+                <div class="article-body">
+                    <div class="article-title">
+                        <h3>Kogi Coby Sweater</h3>
+                    </div>
+                    <div class="article-content">
+                        <p>
+                            Plain color t-shirts are 100% Cotton
+                            Heather Grey t-shirts are 90% Cotton, 10% Polyester
+                            Charcoal Heather t-shirts are 52% Cotton, 48% Polyester
+                            Ethically sourced
+                        </p>
+                    </div>
+                    <div class="article-properties">
+                        <div class="top-properties">
+                            <span class="author">Wade</span>
+                            <span>  Koahsiung</span>
+                        </div>
+                        <div class="bottom-properties">
+                            <span class="author"><i class="fas fa-lg fa-map-marker"></i>Koahsiung City</span>
+                            <span class="author"><i class="fas fa-lg fa-times"></i>  2018/06/17</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="article">
+                <div class="article-img">
+                    <img src="" alt="">
+                </div>
+
+                <div class="article-body">
+                    <div class="article-title">
+                        <h3>Around the world</h3>
+                    </div>
+                    <div class="article-content">
+                        <p>
+                            surveillance video shows a man with half of his face covered, cautiously entering an art
+                            exhibit
+                            in Toronto and then darting away clutching a Banksy print.
+                        </p>
+                    </div>
+                    <div class="article-properties">
+                        <div class="top-properties">
+                            <span class="author">Madison Park, CNN</span>
+                            <span>  Paid Content</span>
+                        </div>
+                        <div class="bottom-properties">
+                            <span class="author"><i class="fas fa-lg fa-map-marker"></i>Japan</span>
+                            <span class="author"><i class="fas fa-lg fa-times"></i>  2018/06/17</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </section>
+</section>
+
+<footer class="clearfix float-right mr-5">
+    <div class="pager clearfix">
+        <ul>
+            <li class="d-inline-block"><<</li>
+            <li class="d-inline-block">1</li>
+            <li class="d-inline-block">2</li>
+            <li class="d-inline-block">3</li>
+            <li class="d-inline-block">4</li>
+            <li class="d-inline-block">5</li>
+            <li class="d-inline-block">>></li>
+        </ul>
+    </div>
+</footer>
 </body>
 </html>
