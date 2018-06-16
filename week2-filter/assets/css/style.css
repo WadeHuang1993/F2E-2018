@@ -25,6 +25,9 @@ header h2 {
     border-radius: 30px;
 }
 
+.article:hover {
+    box-shadow:3px 3px 30px 10px #ccc;
+}
 .article img {
     /*width: 220px;*/
     height: 220px;
