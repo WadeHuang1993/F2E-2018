@@ -10,13 +10,17 @@ input[type="checkbox"] {
 }
 
 body {
-    background-color: #F2F2F2;
+    background-color: #F2F1F2;
 }
 
 header h2 {
     font-family: Optima-ExtraBlack !important;
 }
 
-.badge .badge-outlined {
-    background-color: transparent
+.badge-outlined {
+    background-color: transparent !important;
+}
+
+.radius-50 {
+    border-radius: 30px;
 }
