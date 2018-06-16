@@ -13,6 +13,10 @@ body {
     background-color: #F2F2F2;
 }
 
+header h2 {
+    font-family: Optima-ExtraBlack !important;
+}
+
 .badge .badge-outlined {
     background-color: transparent
 }
