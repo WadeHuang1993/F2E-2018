@@ -17,10 +17,10 @@
     <link rel="stylesheet" href="assets/css/style.css"/>
 </head>
 <body>
-<header class="bg-primary p-2 pl-5 container-fluid align-items-center">
+<header class="bg-primary pl-5 pt-1 pb-1 container-fluid align-items-center">
     <div class="site-title text-white d-inline-block col-3"><h2>HaveFun</h2></div>
     <div class="searcher d-inline-block col-6">
-        <div class="input-group mb-2">
+        <div class="input-group pb-1">
             <div class="input-group-prepend">
                 <div id="btn-search" class="input-group-text"><i class="fa fa-search"></i></div>
             </div>
@@ -32,15 +32,16 @@
 <section class="body container-fluid row pl-5 pr-5">
     <aside class="bg-light border p-2 col-3">
         <div class="filter pr-3 pl-3">
-            <div class="location-selector w-100 border-bottom">
+            <div class="location-selector mt-3 border-bottom">
                 <div class="form-group row">
-                    <label for="location" class="ml-2">location</label>
+                    <h5 class="ml-3">Location</h5>
                     <select class="form-control ml-4 mr-3" id="location">
                         <option>Taiwan</option>
                     </select>
                 </div>
             </div>
-            <div class="date-range mt-3">
+            <div class="date-range mt-3 border-bottom">
+                <h5>Date</h5>
                 <div class="form-group row">
                     <label for="date-start" class="col-2 col-form-label">From</label>
                     <div class="col-sm-10">
@@ -54,15 +55,25 @@
                     </div>
                 </div>
             </div>
-            <div class="categories">
-                <ul>
-                    <li><label><input type="checkbox" name="categores" value="">All</label></li>
-                    <li><label><input type="checkbox" name="categores" value="">Entertainment</label></li>
-                    <li><label><input type="checkbox" name="categores" value="">Food</label></li>
-                    <li><label><input type="checkbox" name="categores" value="">Learning</label></li>
-                    <li><label><input type="checkbox" name="categores" value="">Outdoors</label></li>
-                </ul>
+            <div class="categories mt-3">
+                <h5>Categories</h5>
+                <div class="checkbox">
+                    <label><input type="checkbox" name="categores" value=""> All</label>
+                </div>
+                <div class="checkbox">
+                    <label><input type="checkbox" name="categores" value=""> Entertainment</label>
+                </div>
+                <div class="checkbox">
+                    <label><input type="checkbox" name="categores" value=""> Food</label>
+                </div>
+                <div class="checkbox">
+                    <label><input type="checkbox" name="categores" value=""> Learning</label>
+                </div>
+                <div class="checkbox">
+                    <label><input type="checkbox" name="categores" value=""> Outdoors</label>
+                </div>
             </div>
+        </div>
         </div>
     </aside>
 
@@ -70,8 +81,8 @@
         <span class="search-result">Showing <span class="text-warning">15</span> results by...</span>
 
         <div class="tags">
-            <button class="btn btn-primary">Koahsiung <i class="fa fa-lg fa-plus"></i></button>
-            <button class="btn btn-primary">Entertainment <i class="fa fa-lg fa-plus"></i></button>
+            <button class="btn rounded btn-outline-primary">Koahsiung  </button>
+            <button class="btn btn-outline-primary">Entertainment  <i class="fas fa-times"></i></button>
         </div>
 
         <article>
@@ -80,9 +91,9 @@
                     <img src="" alt="">
                 </div>
 
-                <div class="article-body">
+                <div class="article-body bg-white p-3">
                     <div class="article-title">
-                        <h3>Kogi Coby Sweater</h3>
+                        <h3 class="text-primary">Kogi Coby Sweater</h3>
                     </div>
                     <div class="article-content">
                         <p>
@@ -98,8 +109,8 @@
                             <span>  Koahsiung</span>
                         </div>
                         <div class="bottom-properties">
-                            <span class="author"><i class="fas fa-lg fa-map-marker"></i>Koahsiung City</span>
-                            <span class="author"><i class="fas fa-lg fa-times"></i>  2018/06/17</span>
+                            <span class="author"><i class="fas fa-map-marker"></i>Koahsiung City</span>
+                            <span class="author"><i class="fas fa-times"></i>  2018/06/17</span>
                         </div>
                     </div>
                 </div>
@@ -110,9 +121,9 @@
                     <img src="" alt="">
                 </div>
 
-                <div class="article-body">
+                <div class="article-body bg-white p-3">
                     <div class="article-title">
-                        <h3>Around the world</h3>
+                        <h3 class="text-primary">Around the world</h3>
                     </div>
                     <div class="article-content">
                         <p>
@@ -127,8 +138,8 @@
                             <span>  Paid Content</span>
                         </div>
                         <div class="bottom-properties">
-                            <span class="author"><i class="fas fa-lg fa-map-marker"></i>Japan</span>
-                            <span class="author"><i class="fas fa-lg fa-times"></i>  2018/06/17</span>
+                            <span class="author"><i class="fas fa-map-marker"></i>Japan</span>
+                            <span class="author"><i class="fas fa-times"></i>  2018/06/17</span>
                         </div>
                     </div>
                 </div>
