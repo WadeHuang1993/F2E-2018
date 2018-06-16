@@ -24,3 +24,8 @@ header h2 {
 .radius-50 {
     border-radius: 30px;
 }
+
+.article img {
+    /*width: 220px;*/
+    height: 220px;
+}
