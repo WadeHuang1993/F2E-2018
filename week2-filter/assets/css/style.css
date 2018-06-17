@@ -32,5 +32,5 @@ header .site-title a > span{
 
 .article img {
     /*width: 220px;*/
-    /*height: 340px;*/
+    min-height: 220px;
 }
