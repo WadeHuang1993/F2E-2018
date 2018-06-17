@@ -4,91 +4,139 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1 shrink-to-fit=no">
     <title>F2E 2018 Week2 - Filter</title>
-    <script src="assets/bootstrap4/js/bootstrap.js"></script>
+
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"
+            integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+            crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
             integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
             crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
             integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
             crossorigin="anonymous"></script>
+    <script src="assets/bootstrap4/js/bootstrap.js"></script>
+
+
     <link rel="stylesheet" href="assets/css/bootstrap.css"/>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
           integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/style.css"/>
+    <script language="JavaScript">
+        $(document).ready(function(){
+
+        });
+    </script>
 </head>
 <body>
 <header class="bg-primary pl-5 pt-1 pb-1 container-fluid align-items-center">
     <div class="site-title text-white d-inline-block col-3"><h2>HaveFun</h2></div>
-    <div class="searcher d-inline-block col-6">
+    <div class="searcher d-none d-sm-inline-block col-6">
         <div class="input-group pb-1">
             <div class="input-group-prepend">
                 <div id="btn-search" class="input-group-text"><i class="fa fa-search"></i></div>
             </div>
-            <input type="text" class="form-control text-primary" id="searcher" placeholder="Explore your own activities">
+            <input type="text" class="form-control text-primary" id="searcher"
+                   placeholder="Explore your own activities">
         </div>
     </div>
 </header>
-
-<section class="body container-fluid row no-gutters pl-4 pr-5">
-    <aside class="bg-light border p-2 col-lg-3 col-md-4 col-12">
-        <div class="filter pr-3 pl-3">
+<div class="searcher d-sm-none pl-sm-4 pr-sm-5">
+    <div class="input-group">
+        <div class="input-group-prepend">
+            <div id="" class="input-group-text"><i class="fa fa-search"></i></div>
+        </div>
+        <input type="text" class="form-control text-primary"
+               placeholder="Explore your own activities">
+    </div>
+</div>
+<section class="body container-fluid row no-gutters pl-sm-4 pr-sm-5 p-0">
+    <aside class="bg-light border p-sm-2 col-lg-3 col-md-4 col-12">
+        <div class="filter pr-3 pl-3 d-sm-block">
             <div class="location-selector mt-3 border-bottom">
-                <div class="form-group row">
-                    <h5 class="ml-3">Location</h5>
-                    <select class="form-control ml-4 mr-3" id="location">
-                        <option>Taiwan</option>
-                    </select>
+                <div><span class="h4 ml-3">Location</span>
+                    <button class="btn d-sm-none btn-outline-primary border-0 float-right" type="button"
+                            data-toggle="collapse"
+                            data-target="#collapseLocation"
+                            aria-expanded="false" aria-controls="collapseLocation">
+                        <i class="fa fa-minus"></i>
+                    </button>
                 </div>
-            </div>
-            <div class="date-range mt-3 border-bottom">
-                <h5>Date</h5>
-                <div class="form-group row">
-                    <label for="date-start" class="col-2 col-form-label">From</label>
-                    <div class="col-sm-10">
-                        <input type="date" id="date-start" class="form-control">
+                <div class="collapse d-sm-block" id="collapseLocation">
+                    <div class="form-group row">
+                        <select class="form-control ml-4 mr-3 " id="location">
+                            <option>Taiwan</option>
+                        </select>
                     </div>
                 </div>
-                <div class="form-group row">
-                    <label for="date-end" class="col-2 col-form-label">to</label>
-                    <div class="col-sm-10">
-                        <input type="date" class="form-control" id="date-end">
+            </div>
+
+            <div class="date-range mt-3 border-bottom">
+                <div><span class="h5 ml-3">Date</span>
+                    <button class="btn d-sm-none btn-outline-primary border-0 float-right" type="button"
+                            data-toggle="collapse"
+                            data-target="#collapseDate"
+                            aria-expanded="false" aria-controls="collapseDate">
+                        <i class="fa fa-minus"></i>
+                    </button>
+                </div>
+                <div class="collapse d-sm-block pl-3" id="collapseDate">
+                    <div class="form-group row">
+                        <label for="date-start" class="col-2 col-form-label">From</label>
+                        <div class="col-sm-10">
+                            <input type="date" id="date-start" class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="date-end" class="col-2 col-form-label">to</label>
+                        <div class="col-sm-10">
+                            <input type="date" class="form-control" id="date-end">
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="categories mt-3">
-                <h5>Categories</h5>
-                <div class="checkbox">
-                    <label><input type="checkbox" name="categores" value=""> All</label>
+                <div><span class="h5 ml-3">Categories</span>
+                    <button class="btn d-sm-none btn-outline-primary border-0 float-right" type="button"
+                            data-toggle="collapse"
+                            data-target="#collapseCategories"
+                            aria-expanded="false" aria-controls="collapseCategories">
+                        <i class="fa fa-minus"></i>
+                    </button>
                 </div>
-                <div class="checkbox">
-                    <label><input type="checkbox" name="categores" value=""> Entertainment</label>
-                </div>
-                <div class="checkbox">
-                    <label><input type="checkbox" name="categores" value=""> Food</label>
-                </div>
-                <div class="checkbox">
-                    <label><input type="checkbox" name="categores" value=""> Learning</label>
-                </div>
-                <div class="checkbox">
-                    <label><input type="checkbox" name="categores" value=""> Outdoors</label>
+                <div class="collapse d-sm-block pl-3" id="collapseCategories">
+                    <div class="checkbox">
+                        <label><input type="checkbox" name="categores" value=""> All</label>
+                    </div>
+                    <div class="checkbox">
+                        <label><input type="checkbox" name="categores" value=""> Entertainment</label>
+                    </div>
+                    <div class="checkbox">
+                        <label><input type="checkbox" name="categores" value=""> Food</label>
+                    </div>
+                    <div class="checkbox">
+                        <label><input type="checkbox" name="categores" value=""> Learning</label>
+                    </div>
+                    <div class="checkbox">
+                        <label><input type="checkbox" name="categores" value=""> Outdoors</label>
+                    </div>
                 </div>
             </div>
         </div>
-        </div>
     </aside>
 
-    <section class="float-right container ml-3 pt-3 col">
-        <span class="search-result">Showing <span class="text-warning">15</span> results by...</span>
+    <section class="float-right container mx-3 pt-3 col">
+        <span class="search-result d-sm-block d-none">Showing <span class="text-warning">15</span> results by...</span>
 
-        <div class="tags pt-2">
-            <button class="btn radius-50 btn-outline-primary">Koahsiung  <i class="fas fa-times"></i></button>
-            <button class="btn radius-50 btn-outline-primary">Entertainment  <i class="fas fa-times"></i></button>
+        <div class="tags pt-2 d-sm-block d-none">
+            <button class="btn radius-50 btn-outline-primary">Koahsiung <i class="fas fa-times"></i></button>
+            <button class="btn radius-50 btn-outline-primary">Entertainment <i class="fas fa-times"></i></button>
         </div>
 
         <article>
             <div class="article container-fluid px-0 row no-gutters mt-3">
                 <div class="article-img col-lg-3 col-12">
-                    <img class="w-100" src="https://images.pexels.com/photos/867465/pexels-photo-867465.jpeg?auto=compress" alt="">
+                    <img class="w-100"
+                         src="https://images.pexels.com/photos/867465/pexels-photo-867465.jpeg?auto=compress" alt="">
                 </div>
 
                 <div class="article-body col border bg-white p-3">
@@ -117,9 +165,10 @@
                 </div>
             </div>
 
-            <div class="article container-fluid row px-0 no-gutters mt-3">
+            <div class="article container-fluid row no-gutters px-0  mt-3">
                 <div class="article-img col-lg-3 col-12">
-                    <img class="w-100" src="https://images.pexels.com/photos/867465/pexels-photo-867465.jpeg?auto=compress" alt="">
+                    <img class="w-100"
+                         src="https://images.pexels.com/photos/867465/pexels-photo-867465.jpeg?auto=compress" alt="">
                 </div>
 
                 <div class="article-body col border bg-white p-3">
