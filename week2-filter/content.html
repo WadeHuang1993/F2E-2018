@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1 shrink-to-fit=no">
+    <title>F2E 2018 Week2 - Article</title>
+
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"
+            integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+            crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+    <script src="assets/bootstrap4/js/bootstrap.js"></script>
+
+
+    <link rel="stylesheet" href="assets/css/bootstrap.css"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
+          integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/style.css"/>
+    <script language="JavaScript">
+        $(document).ready(function () {
+
+        });
+    </script>
+</head>
+<body>
+<header class="bg-primary pl-5 pt-1 pb-1 container-fluid row align-items-center">
+    <div class="site-title text-white d-inline-block col-3"><h2>HaveFun</h2></div>
+    <div class="searcher d-none d-sm-inline-block col-6">
+        <div class="input-group pb-1">
+            <div class="input-group-prepend">
+                <div id="btn-search" class="input-group-text"><i class="fa fa-search"></i></div>
+            </div>
+            <input type="text" class="form-control text-primary" id="searcher"
+                   placeholder="Explore your own activities">
+        </div>
+    </div>
+    <div class="searcher d-sm-none d-inline-block col float-right">
+        <div class="input-group pb-1">
+
+            <input type="text" class="form-control text-primary bg-transparent border-0" id="sm-searcher"
+                   placeholder="">
+            <div class="input-group-prepend">
+                <div id="btn-sm-search" class="input-group-text bg-transparent border-0 text-white"><i class="fa fa-search"></i></div>
+            </div>
+        </div>
+    </div>
+</header>
+<section class="body container-fluid row no-gutters pl-sm-4 pr-sm-5 p-0">
+    <aside class="bg-light border p-sm-2 d-none d-md-block col-lg-3 col-md-4 ">
+        <div class="filter pr-3 pl-3 d-sm-block">
+            <div class="location-selector mt-3 border-bottom">
+                <div><span class="h4 ml-3 col-10">Location</span>
+                    <button class="btn d-sm-none btn-outline-primary border-0 float-right" type="button"
+                            data-toggle="collapse"
+                            data-target="#collapseLocation"
+                            aria-expanded="false" aria-controls="collapseLocation">
+                        <i class="fa fa-plus"></i>
+                    </button>
+                </div>
+                <div class="collapse d-sm-block" id="collapseLocation">
+                    <div class="form-group row">
+                        <select class="form-control ml-4 mr-3 " id="location">
+                            <option>Taiwan</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="date-range mt-3 border-bottom">
+                <div><span class="h5 ml-3">Date</span>
+                    <button class="btn d-sm-none btn-outline-primary border-0 float-right" type="button"
+                            data-toggle="collapse"
+                            data-target="#collapseDate"
+                            aria-expanded="false" aria-controls="collapseDate">
+                        <i class="fa fa-plus"></i>
+                    </button>
+                </div>
+                <div class="collapse d-sm-block pl-3 col-10 col-sm-12" id="collapseDate">
+                    <div class="form-group row">
+                        <label for="date-start" class="col-2 col-form-label">From</label>
+                        <div class="col-sm-10">
+                            <input type="date" id="date-start" class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="date-end" class="col-2 col-form-label">to</label>
+                        <div class="col-sm-10">
+                            <input type="date" class="form-control" id="date-end">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="categories mt-3">
+                <div><span class="h5 ml-3">Categories</span>
+                    <button class="btn d-sm-none btn-outline-primary border-0 float-right" type="button"
+                            data-toggle="collapse"
+                            data-target="#collapseCategories"
+                            aria-expanded="false" aria-controls="collapseCategories">
+                        <i class="fa fa-plus"></i>
+                    </button>
+                </div>
+                <div class="collapse d-sm-block pl-3" id="collapseCategories">
+                    <div class="checkbox">
+                        <label><input type="checkbox" name="categores" value=""> All</label>
+                    </div>
+                    <div class="checkbox">
+                        <label><input type="checkbox" name="categores" value=""> Entertainment</label>
+                    </div>
+                    <div class="checkbox">
+                        <label><input type="checkbox" name="categores" value=""> Food</label>
+                    </div>
+                    <div class="checkbox">
+                        <label><input type="checkbox" name="categores" value=""> Learning</label>
+                    </div>
+                    <div class="checkbox">
+                        <label><input type="checkbox" name="categores" value=""> Outdoors</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </aside>
+
+    <section class="float-right container mx-3 pt-3 col">
+        <div class="explore p-2 bg-light">
+            <span class="text-primary">Explore <span class="text-secondary">/ Kogi Coby Sweater</span></span>
+        </div>
+
+        <article>
+            <div class="article container-fluid px-0 row no-gutters mt-3">
+                <div class="article-img img-fluid ">
+                    <img class="w-100"
+                         src="https://images.pexels.com/photos/867465/pexels-photo-867465.jpeg?auto=compress"
+                         alt="">
+                </div>
+
+                <div class="article-body border bg-white p-5">
+                    <div class="article-title">
+                        <h3 class="text-primary">Kogi Coby Sweater</h3>
+                    </div>
+                    <div class="article-properties">
+                        <div class="top-properties">
+                            <span class="author">Wade</span>
+                            <span>  Koahsiung</span>
+                            <span class="badge badge-pill badge-secondary">Koahsiung</span>
+                        </div>
+                        <div class="bottom-properties">
+                            <span class="author"><i class="fas fa-map-marker"></i> Koahsiung City</span>
+                            <span class="author"><i class="far fa-calendar-alt"></i>  2018/06/17</span>
+                        </div>
+                    </div>
+                    <div class="article-content pt-3">
+                        <p>
+                            In the tumultuous business of cutting-in and attending to a whale, there is much running backwards and forwards among the crew. Now hands are wanted here, and then again hands are wanted there. There is no staying in any one place; for at one and the same time everything has to be done everywhere. It is much the same with him who endeavors the description of the scene. We must now retrace our way a little.
+                        </p>
+
+                        <p>
+                            It was mentioned that upon first breaking ground in the whale's back, the blubber-hook was inserted into the original hole there cut by the spades of the mates. But how did so clumsy and weighty a mass as that same hook get fixed in that hole? It was inserted there by my particular friend Queequeg, whose duty it was, as harpooneer, to descend upon the monster's back for the special purpose referred to. But in very many cases, circumstances require that the.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </article>
+    </section>
+</section>
+</body>
+</html>
