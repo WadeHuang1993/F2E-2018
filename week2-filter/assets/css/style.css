@@ -13,7 +13,8 @@ body {
     background-color: #F2F1F2;
 }
 
-header h2 {
+
+header .site-title a > span{
     font-family: Optima-ExtraBlack !important;
 }
 
@@ -26,8 +27,9 @@ header h2 {
 }
 
 .article:hover {
-    box-shadow:3px 3px 30px 2px #ccc;
+    box-shadow: 3px 3px 30px 2px #ccc;
 }
+
 .article img {
     /*width: 220px;*/
     /*height: 340px;*/
