@@ -1,0 +1,17 @@
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6, body {
+    font-family: 'Avenir', Helvetica, Arial, "WenQuanYi Zen Hei", "儷黑 Pro", "LiHei Pro", "黑體-繁", "Heiti TC",
+    "微軟正黑體", "Microsoft JhengHei", sans-serif !important;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.nav-item a, .profile span {
+    font-family: HelveticaNeue-Bold !important;
+    font-size: 20px;
+}
+
+.nav-item.active a {
+    color: white  !important;
+    border-bottom-style: solid;
+    border-bottom-width: 5px;
+}
