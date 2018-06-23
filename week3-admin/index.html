@@ -3,8 +3,8 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1 shrink-to-fit=no">
     <script src="https://code.jquery.com/jquery-3.3.1.js"
-        integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
-        crossorigin="anonymous">
+            integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+            crossorigin="anonymous">
     </script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
             integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
@@ -16,50 +16,50 @@
     <link rel="stylesheet" href="assets/css/bootstrap.css">
 
     <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
-        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
+          integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+          crossorigin="anonymous">
 
     <meta charset="UTF-8">
     <title>F2E - Week3 - Admin</title>
 </head>
 <body>
-    <header class="bg-dark px-5 text-white">
-        <div class="logo pt-3 d-inline-block">
-            <span class="h2 home">Shoptime</span>
-        </div>
-        <nav class="d-inline-block">
-            <ul class="nav">
-                <li class="nav-item active">
-                    <a href="#" class="nav-link text-secondary">Dashboard</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link text-secondary">Orders</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link text-secondary">Products</a>
-                </li>
-            </ul>
-        </nav>
-        <div class="profile float-right pt-3">
-              <span class="text-white">Admin</span>
-        </div>
-    </header>
-    <section class="content px-5 py-2 container-fluid row">
-        <div class="widget col-3 d-inline-block">
-            <span class="h3">Overview</span>
+<header class="bg-dark px-5 text-white">
+    <div class="logo pt-3 d-inline-block">
+        <span class="h2 home">Shoptime</span>
+    </div>
+    <nav class="d-inline-block">
+        <ul class="nav">
+            <li class="nav-item active">
+                <a href="#" class="nav-link text-secondary">Dashboard</a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link text-secondary">Orders</a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link text-secondary">Products</a>
+            </li>
+        </ul>
+    </nav>
+    <div class="profile float-right pt-3">
+        <span class="text-white">Admin</span>
+    </div>
+</header>
+<section class="content bg-light px-5 py-2 container-fluid row m-0">
+    <div class="widget d-inline-block col-12">
+        <span class="h3">Overview</span>
 
-
-        </div>
-        <div class="btn-group text-secondary col d-flex justify-content-end bg-transparent" role="group" aria-label="Button group with nested dropdown">
-            <button type="button" class="btn text-secondary p-0">2018/6/6  <i class="fas ml-1 fa-caret-right"></i>
-
+        <div class="btn-group float-right text-secondary bg-transparent" role="group"
+             aria-label="Button group with nested dropdown">
+            <button type="button" class="btn text-secondary p-0 bg-transparent">2018/6/6 <i class="fas ml-1 fa-caret-right"></i>
             </button>
-            <button type="button" class="btn text-secondary p-0">2018/6/13  <i class="fas ml-1 fa-caret-right"></i>
-
+            <button type="button" class="btn text-secondary p-0 bg-transparent">2018/6/13 <i class="fas ml-1 fa-caret-right"></i>
             </button>
 
-            <div class="btn-group" role="group">
-                <button id="btnGroupDrop1" type="button" class="btn text-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <div class="btn-group bg-transparent" role="group">
+                <button id="btnGroupDrop1" type="button" class="btn text-secondary bg-transparent dropdown-toggle"
+                        data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
                     Weekly
                 </button>
                 <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
@@ -71,7 +71,35 @@
                 </div>
             </div>
         </div>
+    </div>
 
-    </section>
+    <div class="top-box container-fluid row mt-2">
+        <div class="box col-4">
+            <div class="box-content text-center bg-white p-4">
+                <div class="box-header"><i class="fas fa-hand-holding-usd"></i><span> TOTAL REVENUE</span></div>
+                <div class="box-body mt-2">
+                    <span class="text-success">54,540</span>
+                </div>
+            </div>
+        </div>
+        <div class="box col-4">
+            <div class="box-content text-center bg-white p-4">
+                <div class="box-header"><i class="fas fa-th-large"></i><span> TOTAL COST</span></div>
+                <div class="box-body mt-2">
+                    <span class="text-danger">12,660</span>
+                </div>
+            </div>
+        </div>
+        <div class="box col-4">
+            <div class="box-content text-center bg-white p-4">
+                <div class="box-header"><i class="fas fa-money-bill"></i><span> NET INCOME</span></div>
+                <div class="box-body mt-2">
+                    <span class="text-info">41,880</span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
 </body>
 </html>
