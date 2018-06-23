@@ -52,9 +52,11 @@
 
         <div class="btn-group float-right text-secondary bg-transparent" role="group"
              aria-label="Button group with nested dropdown">
-            <button type="button" class="btn text-secondary p-0 bg-transparent">2018/6/6 <i class="fas ml-1 fa-caret-right"></i>
+            <button type="button" class="btn text-secondary p-0 bg-transparent">2018/6/6 <i
+                    class="fas ml-1 fa-caret-right"></i>
             </button>
-            <button type="button" class="btn text-secondary p-0 bg-transparent">2018/6/13 <i class="fas ml-1 fa-caret-right"></i>
+            <button type="button" class="btn text-secondary p-0 bg-transparent">2018/6/13 <i
+                    class="fas ml-1 fa-caret-right"></i>
             </button>
 
             <div class="btn-group bg-transparent" role="group">
@@ -105,9 +107,89 @@
     <div class="activity pack clearfix mt-3">
         <div class="title bg-white">
             <span class="h2">Activity</span>
+            <div class="w-100 chartjs-size-monitor" style="position: absolute; left: 0px; top: 0px; right: 0px; bottom: 0px; overflow: hidden; pointer-events: none; visibility: hidden; z-index: -1;"><div class="chartjs-size-monitor-expand" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;"><div style="position:absolute;width:1000000px;height:1000000px;left:0;top:0"></div></div><div class="chartjs-size-monitor-shrink" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;"><div style="position:absolute;width:200%;height:200%;left:0; top:0"></div></div></div>
+                <canvas id="myChart"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <div class="info row mt-3">
+        <div class="col-6">
+            <div class="pack">
+                Want to lose belly fat and get six pack abs for the summer? Start sculpting your abs with this super
+                effective abs workout app. Workouts are suitable for all levels, and you can easily do them at home or
+                anywhere, anytime. Just a few minutes a day to get the sexy abs you have been dreaming of!
+
+                Workout Plan with Different Levels
+                Lose Belly Fat, Rock Hard Abs and Six Pack Abs - these 3 levels of workout plans help you lose belly fat
+                and build abdominal muscles step by step. Whether you are a beginner or a pro, you can find workouts
+                that are suitable for you. Different exercises are prepared every day to keep it fresh and exciting.
+
+                30 Days of Workout Routines
+            </div>
+
+        </div>
+
+        <div class="col-6">
+            <div class="pack">
+                Want to lose belly fat and get six pack abs for the summer? Start sculpting your abs with this super
+                effective abs workout app. Workouts are suitable for all levels, and you can easily do them at home or
+                anywhere, anytime. Just a few minutes a day to get the sexy abs you have been dreaming of!
+
+                Workout Plan with Different Levels
+                Lose Belly Fat, Rock Hard Abs and Six Pack Abs - these 3 levels of workout plans help you lose belly fat
+                and build abdominal muscles step by step. Whether you are a beginner or a pro, you can find workouts
+                that are suitable for you. Different exercises are prepared every day to keep it fresh and exciting.
+
+                30 Days of Workout Routines
+            </div>
 
         </div>
     </div>
 </section>
+<script>
+    $(document).ready(function () {
+        var ctx = document.getElementById('myChart').getContext('2d');
+        var chart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+                datasets: [
+                    {
+                        label: 'Revenue',
+                        backgroundColor: '#7ED321',
+                        borderColor: '#7ED321',
+                        data: [0, 10, 5, 2, 20, 30, 50],
+                        fill: false,
+                        lineTension: 0,
+                    },
+                    {
+                        label: 'Cost',
+                        backgroundColor: '#D0021B',
+                        borderColor: '#D0021B',
+                        data: [0, 10, 15, 5, 20, 30, 50],
+                        fill: false,
+                        lineTension: 0,
+                    },
+                    {
+                        label: 'Income',
+                        backgroundColor: '#4A90E2',
+                        borderColor: '#4A90E2',
+                        data: [0, 10, 5, 2, 30, 30, 50],
+                        fill: false,
+                        lineTension: 0,
+                    },
+                ],
+            },
+            // Configuration options go here
+            options: {},
+        });
+    });
+
+
+    window.onload = function() {
+
+    };
+</script>
 </body>
 </html>
